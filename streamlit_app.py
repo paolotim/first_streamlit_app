@@ -80,7 +80,7 @@ if st.button('Get Fruit Load List'):
    my_data_rows = get_fruit_load_list()
    st.dataframe(my_data_rows)
 
-st.stop()
+# st.stop()
 
 # New section to add selected fruit: first simple version with no Control of Flow
 # add_my_fruit = st.text_input('What fruit would you like to add?','starfruit')
