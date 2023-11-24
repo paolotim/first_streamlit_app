@@ -44,3 +44,7 @@ my_data_rows = my_cur.fetchall()
 st.header("The fruit load list contains:")
 st.dataframe(my_data_rows)
 
+# New section to add selected fruit
+add_my_fruit = st.text_input('What fruit would you like to add?','starfruit')
+st.write('Thanks for adding ', add_my_fruit)
+
