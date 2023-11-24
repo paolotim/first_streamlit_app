@@ -3,6 +3,7 @@ import streamlit as st
 import pandas as pd
 import requests
 import snowflake.connector
+from urllib.error import URLError
 
 st.title('My Parents New Healthy Diner')
 st.header('Breakfast Menu')
@@ -35,6 +36,8 @@ fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + fruit_c
 fruityvice_normalized = pd.json_normalize(fruityvice_response.json())
 # display the normalize table on the screen
 st.dataframe(fruityvice_normalized)
+
+st.stop()
 
 # add snowflake query
 my_cnx = snowflake.connector.connect(**st.secrets["snowflake"])
